@@ -64,7 +64,7 @@ edited_data['hour'] = edited_data['full_date'].dt.hour
 edited_data['day_of_week'] = edited_data['full_date'].dt.day_name()
 
 ml_data = pd.read_csv(ml_data_path)
-ml_data['predicted_best_time'] = pd.to_datetime(ml_data['predicted_best_time'])
+ml_data['predicted_best_time'] = pd.to_datetime(ml_data['predicted_best_time'], errors='coerce')
 ml_data['hour'] = ml_data['predicted_best_time'].dt.hour
 ml_data['day_of_week'] = ml_data['predicted_best_time'].dt.day_name()
 
