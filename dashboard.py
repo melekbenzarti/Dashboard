@@ -54,8 +54,8 @@ def t(key):
     return TRANSLATIONS[st.session_state.language][key]
 
 # Load datasets
-human_data_path = os.path.abspath("Updated_EDITEED_Data.xlsx")
-ml_data_path = os.path.abspath("DataBase_with_timing_predictions_final2.csv")
+human_data_path = "Updated_EDITEED_Data.xlsx"
+ml_data_path = "DataBase_with_timing_predictions_final2.csv"
 
 # Load and preprocess the data
 edited_data = pd.read_excel(human_data_path)
